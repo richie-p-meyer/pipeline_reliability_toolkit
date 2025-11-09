@@ -103,12 +103,12 @@ class ProductRecord(BaseModel):
 Invalid rows automatically route to the dead-letter file.  
   
 ## **Future Improvements**   
-Add Marshmallow schema backend  
-Add async/httpx retry pipeline  
-Add automatic Prometheus-style counters for retries/failures  
-Add URL pattern-based exception suppression  
-Add a small web UI for dead-letter triage  
-Add integration with Playwright for robust scraping pipelines  
+-Add Marshmallow schema backend  
+-Add async/httpx retry pipeline  
+-Add automatic Prometheus-style counters for retries/failures  
+-Add URL pattern-based exception suppression  
+-Add a small web UI for dead-letter triage  
+-Add integration with Playwright for robust scraping pipelines  
   
 ## **About the Author — Richard Wilders**   
 -Marine Corps veteran (Afghanistan — mission-critical language ops)  
