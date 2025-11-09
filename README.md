@@ -120,5 +120,5 @@ Invalid rows automatically route to the dead-letter file.
 
 This project is part of my engineering portfolio demonstrating reliability mindset and production-readiness for on-call, fast-paced environments like Tesla’s Cell Software organization.
 
-## **Connect**. 
-GitHub: https://github.com/richie-p-meyer    LinkedIn: https://www.linkedin.com/in/richard-wilders-915395106/.   
+## **Connect**  
+GitHub: https://github.com/richie-p-meyer    LinkedIn: https://www.linkedin.com/in/richard-wilders-915395106/. 
