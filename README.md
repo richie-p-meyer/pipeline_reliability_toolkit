@@ -75,35 +75,35 @@ triage     → Summarize dead-letter failure patterns
 
 ## **Usage Examples**
 Validate a CSV file 
-
-python3 pipeline_reliability_toolkit.py validate \ 
-    --in-file data.csv \ 
-    --schema builtins.ProductRecord \ 
-    --good-out out/good.jsonl \ 
-    --dead-letter out/dead_letter.jsonl 
-Fetch a URL with retries 
-
-python3 pipeline_reliability_toolkit.py run-url \ 
-    --url https://httpbin.org/status/500 
-Summarize a dead-letter file 
-
-python3 pipeline_reliability_toolkit.py triage \ 
-    --dead-letter out/dead_letter.jsonl 
-
-## **Project Structure**
-
-pipeline_reliability_toolkit/
-│
-├── pipeline_reliability_toolkit.py     # Main toolkit + CLI
-├── README.md                           # This file
-│
-├── sample/
-│   ├── data.csv                        # Example pipeline input
-│   └── out/                            # (gitignored) output & DLQ
-
-Included Schema Example 
  
-class ProductRecord(BaseModel): 
+python3 pipeline_reliability_toolkit.py validate \  
+    --in-file data.csv \  
+    --schema builtins.ProductRecord \  
+    --good-out out/good.jsonl \  
+    --dead-letter out/dead_letter.jsonl  
+Fetch a URL with retries 
+ 
+python3 pipeline_reliability_toolkit.py run-url \  
+    --url https://httpbin.org/status/500  
+Summarize a dead-letter file  
+ 
+python3 pipeline_reliability_toolkit.py triage \  
+    --dead-letter out/dead_letter.jsonl  
+
+## **Project Structure** 
+
+pipeline_reliability_toolkit/ 
+│ 
+├── pipeline_reliability_toolkit.py     # Main toolkit + CLI 
+├── README.md                           # This file 
+│ 
+├── sample/ 
+│   ├── data.csv                        # Example pipeline input 
+│   └── out/                            # (gitignored) output & DLQ 
+ 
+Included Schema Example  
+  
+class ProductRecord(BaseModel):  
     id: str 
     name: str 
     price: float = Field(..., ge=0.0) 
@@ -111,7 +111,7 @@ class ProductRecord(BaseModel):
     ts: Optional[datetime] = None 
 Invalid rows automatically route to the dead-letter file. 
 
-## **Future Improvements**
+## **Future Improvements** 
 Add Marshmallow schema backend 
 Add async/httpx retry pipeline 
 Add automatic Prometheus-style counters for retries/failures 
