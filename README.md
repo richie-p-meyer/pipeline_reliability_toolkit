@@ -92,15 +92,6 @@ python3 pipeline_reliability_toolkit.py triage \
 
 ## **Project Structure**   
   
-pipeline_reliability_toolkit/  
-│  
-├── pipeline_reliability_toolkit.py     # Main toolkit + CLI  
-├── README.md                           # This file  
-│  
-├── sample/  
-│   ├── data.csv                        # Example pipeline input  
-│   └── out/                            # (gitignored) output & DLQ  
-   
 Included Schema Example  
   
 class ProductRecord(BaseModel):  
