@@ -55,9 +55,7 @@ These are the same mental models required to support mission-critical manufactur
 
 ### **3. Dead-Letter Queue (JSONL)**
 Captures invalid records as:
-
-```json
-{"ts": "...", "error_code": "VALIDATION", "error_msg": "...", "record": {...}}
+{"ts": "...", "error_code": "VALIDATION", "error_msg": "...", "record": {...}} 
 
 
 ### **4. Structured JSON Logging** 
