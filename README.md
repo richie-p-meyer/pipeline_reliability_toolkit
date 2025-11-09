@@ -90,44 +90,44 @@ Summarize a dead-letter file
 python3 pipeline_reliability_toolkit.py triage \  
     --dead-letter out/dead_letter.jsonl  
 
-## **Project Structure** 
-
-pipeline_reliability_toolkit/ 
-│ 
-├── pipeline_reliability_toolkit.py     # Main toolkit + CLI 
-├── README.md                           # This file 
-│ 
-├── sample/ 
-│   ├── data.csv                        # Example pipeline input 
-│   └── out/                            # (gitignored) output & DLQ 
- 
+## **Project Structure**   
+  
+pipeline_reliability_toolkit/  
+│  
+├── pipeline_reliability_toolkit.py     # Main toolkit + CLI  
+├── README.md                           # This file  
+│  
+├── sample/  
+│   ├── data.csv                        # Example pipeline input  
+│   └── out/                            # (gitignored) output & DLQ  
+   
 Included Schema Example  
   
 class ProductRecord(BaseModel):  
-    id: str 
-    name: str 
-    price: float = Field(..., ge=0.0) 
-    quantity: int = Field(..., ge=0) 
-    ts: Optional[datetime] = None 
-Invalid rows automatically route to the dead-letter file. 
-
-## **Future Improvements** 
-Add Marshmallow schema backend 
-Add async/httpx retry pipeline 
-Add automatic Prometheus-style counters for retries/failures 
-Add URL pattern-based exception suppression 
-Add a small web UI for dead-letter triage 
-Add integration with Playwright for robust scraping pipelines 
-
-## **About the Author — Richard Wilders**  
--Marine Corps veteran (Afghanistan — mission-critical language ops) 
--Background in data science, distributed pipelines, and observability 
--Strong interest in SRE, reliability engineering, and DevOps 
--Build tools that improve system health & debuggability 
--Completed ten 10-day Vipassana meditation courses — calm during incidents 
--Based in Reno/Sparks, NV 
+    id: str  
+    name: str  
+    price: float = Field(..., ge=0.0)  
+    quantity: int = Field(..., ge=0)  
+    ts: Optional[datetime] = None  
+Invalid rows automatically route to the dead-letter file.  
+  
+## **Future Improvements**   
+Add Marshmallow schema backend  
+Add async/httpx retry pipeline  
+Add automatic Prometheus-style counters for retries/failures  
+Add URL pattern-based exception suppression  
+Add a small web UI for dead-letter triage  
+Add integration with Playwright for robust scraping pipelines  
+  
+## **About the Author — Richard Wilders**   
+-Marine Corps veteran (Afghanistan — mission-critical language ops)  
+-Background in data science, distributed pipelines, and observability  
+-Strong interest in SRE, reliability engineering, and DevOps  
+-Build tools that improve system health & debuggability  
+-Completed ten 10-day Vipassana meditation courses — calm during incidents  
+-Based in Reno/Sparks, NV  
 
 This project is part of my engineering portfolio demonstrating reliability mindset and production-readiness for on-call, fast-paced environments like Tesla’s Cell Software organization.
 
-## **Connect**
-GitHub: https://github.com/richie-p-meyer   LinkedIn: https://www.linkedin.com/in/richard-wilders-915395106/. 
+## **Connect**. 
+GitHub: https://github.com/richie-p-meyer    LinkedIn: https://www.linkedin.com/in/richard-wilders-915395106/.   
